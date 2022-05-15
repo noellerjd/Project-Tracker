@@ -1,0 +1,114 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+    <title>Project Tracker</title>
+  </head>
+<body>
+    <!-- header timer -->
+    <header class="nav">
+        <div>
+            <h1 id="welcome_text">Welcome to the Project Tracker!</h1>
+        </div>
+        <div>
+            <p id="date"></p>
+        </div>
+    </header>
+    <!-- bootstrap card component -->
+    <section class="instruct d-flex justify-content-center">
+        <div class="card" id="custom-card" style="width: 32rem;">
+            <div class="card-body">
+                <p>Instructions on how to use:</p>
+                <!-- <p>First, choose what type of job you will be doing. Then enter in the hourly amount you will be paid. Finally, Choose the due date!</p> -->
+                <ul>
+                    <li>First, choose what type of job you will be doing.</li>
+                    <li>Then enter in the hourly amount you will be paid.</li>
+                    <li>Choose the due date!</li>
+                    <li>Make sure you save changes!</li>
+                </ul>
+                <!-- Modal button -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Start
+                  </button>
+                  
+                  <!-- Modal -->
+                  <form autocomplete="off">
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Project Tracker</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                              <!-- Job Name -->
+
+                              <div class="form-group">
+                                  <input class="form-control" type="text" id="jobname" placeholder="Job Name"></input>
+                              </div>
+                              <!-- select type of job -->
+                              <select class="form-control form-control" id="dropdownselect">
+                                  <option>Job Type</option>
+                                  <option>---------</option>
+                                  <option>HTML</option>
+                                  <option>JQuery</option>
+                                  <option>CSS</option>
+                                  <option>Javascript</option>
+                              </select><br>
+                              <!-- Hourly Wage for job -->
+                              <input class="form-control" type="text" id="set_wage" placeholder="Hourly Wage ($)"><br>
+                              <input class="form-control" type="text" placeholder="When is it due?" id="datepicker"><br>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" onclick="newProject();" class="btn btn-primary" id="save-btn" data-dismiss="modal">Save changes</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+        </div>
+    </section>
+    <!-- table -->
+    <section class="biglist">
+        <table class="table table-dark" id="jobslist">
+            <thead>
+                <tr>
+                    <th scope="col">Job Name</th>
+                    <th scope="col">Project type</th>
+                    <th scope="col">Hourly Wage</th>
+                    <th scope="col">Due Date</th>
+                    <th scope="col">Days until due date</th>
+                    <th scope="col">Estimated Total Earned</th>
+                </tr>
+            </thead>
+            <tbody>
+              <tr>
+
+              </tr>
+            </tbody>
+        </table>
+    </section>
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

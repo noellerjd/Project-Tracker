@@ -1,0 +1,46 @@
+:root{
+    --primary: #5b85aa;
+    --secondary: #414770;
+    --bright: #f46036;
+    --dark: #171123;
+    --white: #fff;
+}
+body{
+    background-color: var(--primary);
+    font-family: 'Dosis', sans-serif;
+}
+/* Nav Bar / Header */
+.nav{
+    background-color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    box-shadow: var(--dark) 0 0 5px 2px;
+}
+.nav p{
+    color: var(--bright);
+    font-weight: 500;
+    font-size: 20px;
+    text-shadow: var(--dark) 0px 1px 1px;
+    transition: all 0.3s ease;
+}
+.nav p:hover{
+    color: var(--white);
+}
+#welcome_text{
+    color: var(--white);
+    text-shadow: var(--dark) 0px 2px 2px;
+}
+/* instructions */
+.instruct{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#custom-card{
+    box-shadow: var(--dark) 0 0 3px 1px;
+}
+.instruct ul li{
+    list-style: none;
+    padding-left: 30px;
+}
